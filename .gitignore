@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+/.kotlin/errors/errors-1781349613886.log
+/.idea/gradle.xml
+/.idea/kotlinc.xml
+/.idea/vcs.xml
+
+
