@@ -60,5 +60,6 @@ dependencies {
 
     implementation(project(":ui:signin"))
     implementation(project(":ui:theme"))
+    implementation(project(":ui:getstarted"))
     //implementation(project(":ui:getstarted"))
 }
