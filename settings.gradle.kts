@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "Netflix"
 include(":app")
 include(":ui:signin")
+include(":ui:getstarted")
+include(":ui:theme")
