@@ -12,6 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.app.getstarted.GetStarted
+import com.app.signin.Password
 import com.app.theme.NetflixTheme
 import com.app.signin.PhoneNumber
 
@@ -33,9 +34,14 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                     composable("phoneNumber") {
-                        PhoneNumber(onLoginSuccess = {}, onBackClick = {
+                        PhoneNumber(onLoginSuccess = {
+                            navController.navigate("password")
+                        }, onBackClick = {
                             navController.navigateUp()
                         })
+                    }
+                    composable("password") {
+                        Password()
                     }
                 }
             }
