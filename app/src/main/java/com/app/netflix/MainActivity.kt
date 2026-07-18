@@ -11,6 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.app.getstarted.GetStarted
 import com.app.theme.NetflixTheme
 import com.app.signin.PhoneNumber
 
@@ -25,17 +26,17 @@ class MainActivity : ComponentActivity() {
         setContent {
             val navController = rememberNavController()
             NetflixTheme {
-                NavHost(navController = navController, startDestination = "phoneNumber") {
+                NavHost(navController = navController, startDestination = "getStarted") {
+                    composable("getStarted") {
+                        GetStarted {
+                            navController.navigate("phoneNumber")
+                        }
+                    }
                     composable("phoneNumber") {
                         PhoneNumber(onLoginSuccess = {}, onBackClick = {
                             navController.navigateUp()
                         })
                     }
-                    /*composable("getstarted") {
-                        GetStarted {
-                            navController.navigate("signin")
-                        }
-                    }*/
                 }
             }
         }
