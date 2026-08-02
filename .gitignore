@@ -220,3 +220,5 @@ local.properties
 /ui/getstarted/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.s
 /ui/getstarted/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i
 /ui/getstarted/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len
+/.kotlin/errors/errors-1785167644514.log
+.idea
