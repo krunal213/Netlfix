@@ -41,7 +41,11 @@ class MainActivity : ComponentActivity() {
                         })
                     }
                     composable("password") {
-                        Password()
+                        Password(onChangeClick = {
+                            navController.navigateUp()
+                        }, onBackClick = {
+                            navController.navigateUp()
+                        })
                     }
                 }
             }
