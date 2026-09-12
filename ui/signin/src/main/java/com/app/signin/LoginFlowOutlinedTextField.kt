@@ -33,6 +33,6 @@ fun LoginFlowOutlinedTextField(
 @Composable
 fun LoginFlowOutlinedTextFieldPreview() {
     NetflixTheme {
-        LoginFlowOutlinedTextField("Hello")
+        LoginFlowOutlinedTextField("Hello",Modifier,"value",{})
     }
 }
