@@ -15,6 +15,7 @@ import com.app.getstarted.GetStarted
 import com.app.signin.Password
 import com.app.theme.NetflixTheme
 import com.app.signin.PhoneNumber
+import com.app.splash.Splash
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
@@ -27,7 +28,16 @@ class MainActivity : ComponentActivity() {
         setContent {
             val navController = rememberNavController()
             NetflixTheme {
-                NavHost(navController = navController, startDestination = "getStarted") {
+                NavHost(navController = navController, startDestination = "splash") {
+                    composable("splash") {
+                        Splash {
+                            navController.navigate("getStarted") {
+                                popUpTo("splash") {
+                                    inclusive = true
+                                }
+                            }
+                        }
+                    }
                     composable("getStarted") {
                         GetStarted {
                             navController.navigate("phoneNumber")
