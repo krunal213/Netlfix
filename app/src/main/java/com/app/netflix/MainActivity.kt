@@ -12,6 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.app.getstarted.GetStarted
+import com.app.howprofileworks.HowProfileWorks
 import com.app.signin.Password
 import com.app.theme.NetflixTheme
 import com.app.signin.PhoneNumber
@@ -55,7 +56,12 @@ class MainActivity : ComponentActivity() {
                             navController.navigateUp()
                         }, onBackClick = {
                             navController.navigateUp()
+                        }, onSignInClick = {
+                            navController.navigate("howprofileworks")
                         })
+                    }
+                    composable("howprofileworks") {
+                        HowProfileWorks()
                     }
                 }
             }
