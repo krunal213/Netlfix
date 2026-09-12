@@ -25,7 +25,7 @@ import androidx.constraintlayout.compose.Dimension
 import com.app.theme.NetflixTheme
 
 @Composable
-fun Password(onChangeClick : () -> Unit,onBackClick : () -> Unit) {
+fun Password(onChangeClick: () -> Unit, onBackClick: () -> Unit, onSignInClick: () -> Unit) {
     Scaffold(
         topBar = {
             LoginFlowTopAppBar(onBackClick = onBackClick)
@@ -82,7 +82,7 @@ fun Password(onChangeClick : () -> Unit,onBackClick : () -> Unit) {
                 value = "8806616913",
                 onValueChange = {},
                 trailingIcon = {
-                    TextButton(onClick = onChangeClick){
+                    TextButton(onClick = onChangeClick) {
                         Text("Change", fontSize = 16.sp)
                     }
                 }
@@ -113,7 +113,7 @@ fun Password(onChangeClick : () -> Unit,onBackClick : () -> Unit) {
                     start.linkTo(guideLineFromLeft)
                 })
             Button(
-                onClick = {},
+                onClick = onSignInClick,
                 shape = RoundedCornerShape(4.dp),
                 modifier = Modifier
                     .fillMaxWidth()
@@ -203,6 +203,6 @@ fun Password(onChangeClick : () -> Unit,onBackClick : () -> Unit) {
 @Composable
 fun PasswordPreview() {
     NetflixTheme {
-        Password(onBackClick = {}, onChangeClick = {})
+        Password(onBackClick = {}, onChangeClick = {}, onSignInClick = {})
     }
 }
