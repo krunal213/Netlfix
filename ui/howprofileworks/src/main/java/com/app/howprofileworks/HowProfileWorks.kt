@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HowProfileWorks() {
+fun HowProfileWorks(onGotItClick : () -> Unit) {
     HowProfileWorksTheme {
         Scaffold(topBar = {
             CenterAlignedTopAppBar(title = {
@@ -71,7 +71,7 @@ fun HowProfileWorks() {
                 Button(modifier = Modifier
                     .padding(top = 16.dp)
                     .fillMaxWidth(),
-                    shape = RoundedCornerShape(4.dp), onClick = {}) {
+                    shape = RoundedCornerShape(4.dp), onClick = onGotItClick) {
                     Text("Got it", modifier = Modifier.padding(all = 8.dp), fontSize = 20.sp)
                 }
             }
@@ -83,6 +83,6 @@ fun HowProfileWorks() {
 @Composable
 fun HowProfileWorksPreview() {
     HowProfileWorksTheme {
-        HowProfileWorks()
+        HowProfileWorks{}
     }
 }

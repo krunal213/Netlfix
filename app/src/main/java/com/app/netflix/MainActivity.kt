@@ -58,14 +58,18 @@ class MainActivity : ComponentActivity() {
                         }, onBackClick = {
                             navController.navigateUp()
                         }, onSignInClick = {
-                            navController.navigate("howprofileworks")
+                            navController.navigate("howProfileWorks")
                         })
                     }
-                    composable("howprofileworks") {
-                        HowProfileWorks()
+                    composable("howProfileWorks") {
+                        HowProfileWorks {
+                            navController.navigate("chooseProfile")
+                        }
                     }
-                    composable("chooseprofile") {
-                        ChooseProfile {  }
+                    composable("chooseProfile") {
+                        ChooseProfile {
+
+                        }
                     }
                 }
             }
