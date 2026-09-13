@@ -11,6 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.app.chooseprofile.ChooseProfile
 import com.app.getstarted.GetStarted
 import com.app.howprofileworks.HowProfileWorks
 import com.app.signin.Password
@@ -62,6 +63,9 @@ class MainActivity : ComponentActivity() {
                     }
                     composable("howprofileworks") {
                         HowProfileWorks()
+                    }
+                    composable("chooseprofile") {
+                        ChooseProfile {  }
                     }
                 }
             }
